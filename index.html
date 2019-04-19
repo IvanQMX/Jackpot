@@ -86,11 +86,13 @@
             title: '¡Felicidades!',
             showConfirmButton: false,
             timer: 2000
-          })
+          });
         }
+        btnShuffle.disabled = false;
       }
 
       btnShuffle.addEventListener('click', () => {
+        btnShuffle.disabled = true;
         order=[];
         machine1.shuffle(5, onComplete);
         machine2.shuffle(11, onComplete);
